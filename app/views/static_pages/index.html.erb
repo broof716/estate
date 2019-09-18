@@ -4,9 +4,8 @@
     <br />
     <h1>Mr Estate Sales Showing, Products and More.</h1>
     <br />
-    <%= link_to 'Sate of Puropse', '#', class: 'btn btn-success' %>
     <%= link_to 'Find Sales', '#', class: 'btn btn-success' %>
-    <%= link_to 'Shop', '#', class: 'btn btn-success' %>
+    <%= link_to 'Online Marketplace', '#', class: 'btn btn-success' %>
     <br /><br />
   </div>
 </div>
@@ -16,6 +15,15 @@
   <div class="col-12 col-sm">
     <h2>Register For Up To Date Estate Sales</h2>
     <br />
-    <%= link_to 'Sale Notification', '#', class: 'btn btn-success' %>
+    <%= link_to 'Sale Notification', new_user_registration_path, class: 'btn btn-success' %>
   </div>
 </div>
+
+<% @locations.each do |location| %>
+  <div>
+    <h3><%= location.name %></h3><br />
+    <i><%= location.address %></i><br />
+  </div>
+  
+  <hr />
+<% end %>
